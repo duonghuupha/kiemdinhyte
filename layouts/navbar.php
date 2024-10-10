@@ -34,63 +34,20 @@ if(!isset($_SESSION['data'])){
                 </li>
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <img class="nav-user-photo" src="<?php echo URL.'/public/assets' ?>/images/Logo.png"/>
+                        <img class="nav-user-photo" src="<?php echo URL.'/public/assets' ?>/images/Logo.jpg"/>
                         <span class="user-info">
                             <small>Xin chào,</small>
                             <?php
-                            echo $_SESSION['data'][0]['fullname'];
+                            echo $_SESSION['data']['fullname'];
                             ?>
                         </span>
                         <i class="ace-icon fa fa-caret-down"></i>
                     </a>
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="<?php echo URL.'/profile' ?>">
+                            <a href="javascript:void(0)">
                                 <i class="ace-icon fa fa-user"></i>
                                 Tài khoản
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo URL.'/users' ?>">
-                                <i class="ace-icon fa fa-users"></i>
-                                Người dùng
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="<?php echo URL.'/category' ?>">
-                                <i class="ace-icon fa fa-list"></i>
-                                Danh mục
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo URL.'/product' ?>">
-                                <i class="ace-icon fa fa-cubes"></i>
-                                Sản phẩm
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo URL.'/import' ?>">
-                                <i class="ace-icon fa fa-cloud-download"></i>
-                                Nhập kho
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo URL.'/seller' ?>">
-                                <i class="ace-icon fa fa-cart-plus"></i>
-                                Bán hàng
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo URL.'/exam' ?>">
-                                <i class="ace-icon fa fa-heartbeat"></i>
-                                Khám chữa bệnh
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo URL.'/report' ?>">
-                                <i class="ace-icon fa fa-bar-chart"></i>
-                                Báo cáo
                             </a>
                         </li>
                         <li class="divider"></li>

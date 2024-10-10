@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>IVYVET CENTER</title>
+		<title>VETABYTE SOFTWARE</title>
 		<meta name="description" content="User login page" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<link rel="stylesheet" href="<?php echo URL.'/public/assets' ?>/css/roboto.css" />
@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="<?php echo URL.'/public/assets' ?>/css/jquery.toast.css" />
 		<link rel="stylesheet" href="<?php echo URL.'/public/assets' ?>/css/ace.min.css" />
 		<link rel="stylesheet" href="<?php echo URL.'/public/assets' ?>/css/ace-rtl.min.css" />
-		<link rel="shortcut icon" href="<?php echo URL ?>/public/assets/images/Logo.png" />
+		<link rel="shortcut icon" href="<?php echo URL ?>/public/assets/images/Logo.jpg" />
 		<script src="<?php echo URL.'/public/assets' ?>/js/jquery-2.1.4.min.js"></script>
 		<script src="<?php echo URL.'/public/assets' ?>/js/jquery.toast.js"></script>
 		<script src="<?php echo URL.'/public' ?>/scripts/javascript/properties.js"></script>
@@ -35,10 +35,10 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="red">IVYVET</span>
-									<span class="grey" id="id-text2">CENTER</span>
+									<span class="red">VETA</span>
+									<span class="grey" id="id-text2">BYTE</span>
 								</h1>
-								<h4 class="blue" id="id-company-text">&copy; Trung tâm thú cưng IVYVET</h4>
+								<h4 class="blue" id="id-company-text">Quản lý kiểm định chất lượng y tế</h4>
 							</div>
 							<div class="space-6"></div>
 							<div class="position-relative">
@@ -84,21 +84,21 @@
 											</div>
 											<div class="space-6"></div>
 											<div class="social-login center">
-												<a class="btn btn-primary">
+												<a class="btn btn-primary" href="javascript:void(0)">
 													<i class="ace-icon fa fa-facebook"></i>
 												</a>
-												<a class="btn btn-info">
+												<a class="btn btn-info" href="javascript:void(0)">
 													<i class="ace-icon fa fa-twitter"></i>
 												</a>
-												<a class="btn btn-danger">
+												<a class="btn btn-danger" href="javascript:void(0)"> 
 													<i class="ace-icon fa fa-google-plus"></i>
 												</a>
 											</div>
 										</div><!-- /.widget-main -->
 										<div class="toolbar clearfix">
 											<div>
-												<a href="javascript:void(0)" data-target="#forgot-box" class="forgot-password-link">
-													Trung tâm thú cưng IVYVET - IVYVET CENTER
+												<a href="https://vetabyte.com" data-target="#forgot-box" class="forgot-password-link" target="_blank">
+													Phần mềm quản lý Vetabyte - VDATA
 												</a>
 											</div>
 										</div>

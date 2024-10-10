@@ -8,166 +8,127 @@
                 </li>
                 <li class="active">Bảng điều khiển</li>
             </ul><!-- /.breadcrumb -->
+            <div class="nav-search" id="nav-search">
+                <form class="form-search">
+                    <span class="input-icon">
+                        <input type="text" placeholder="Tìm kiếm ..." class="nav-search-input" id="nav-search-input"
+                            autocomplete="off" onkeyup="search()" />
+                        <i class="ace-icon fa fa-search nav-search-icon"></i>
+                    </span>
+                </form>
+            </div><!-- /.nav-search -->
         </div>
         <div class="page-content">
             <div class="page-header">
                 <h1>
-                    Bàn làm việc
-                    <small>
-                        <i class="ace-icon fa fa-angle-double-right"></i>
-                        Tổng quan - Thống kê hệ thống
-                    </small>
+                    Quản lý kiểm định chất lượng thiết bị y tế
                 </h1>
             </div><!-- /.page-header -->
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="row">
-                        <div class="space-6"></div>
-                        <div class="col-sm-7 infobox-container">
-                            <div class="infobox infobox-green">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-cart-plus"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <span class="infobox-data-number"><?php echo $this->seller_to ?></span>
-                                    <div class="infobox-content">Đơn hàng hôm qua</div>
-                                </div>
-                            </div>
-                            <div class="infobox infobox-blue">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-cart-arrow-down"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <span class="infobox-data-number"><?php echo $this->seller_now ?></span>
-                                    <div class="infobox-content">Đơn hàng hôm nay</div>
-                                </div>
-                            </div>
-                            <div class="infobox infobox-pink">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-shopping-cart"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <span class="infobox-data-number"><?php echo number_format($this->total_seller) ?></span>
-                                    <div class="infobox-content">Tổng đơn hàng</div>
-                                </div>
-                            </div>
-                            <div class="infobox infobox-red">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-money"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <span class="infobox-data-number"><?php echo number_format($this->rev_to) ?></span>
-                                    <div class="infobox-content">Doanh thu hôm qua</div>
-                                </div>
-                            </div>
-                            <div class="infobox infobox-orange2">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-cc-visa"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <span class="infobox-data-number"><?php echo number_format($this->rev_now) ?></span>
-                                    <div class="infobox-content">Doanh thu hôm nay</div>
-                                </div>
-                            </div>
-                            <div class="infobox infobox-blue2">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-bank"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <span class="infobox-data-number"><?php echo number_format($this->total_rev) ?></span>
-                                    <div class="infobox-content">
-                                        Tổng doanh thu
+                <div class="col-xs-12 col-lg-12">
+                    <form method="post" id="fm">
+                        <div class="row">
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Lựa chọn loại kiểm định
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <select id="loai_id" name="loai_id" required="" class="select2"
+                                        data-placeholder="Lựa chọn loại" style="width:100%">
+                                            <option value="1">Kiểm định năng lượng phá rung tim</option>
+                                            <option value="2">Kiểm định thời gian phá rung tim đồng bộ</option>
+                                            <option value="3">Kiểm định thời gian phá rung tim liên tiếp</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="space-6"></div>
-                            <div class="infobox infobox-green infobox-small infobox-dark">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-download"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <div class="infobox-content">Today</div>
-                                    <div class="infobox-content">2345345</div>
-                                </div>
-                            </div>
-                            <div class="infobox infobox-blue infobox-small infobox-dark">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-money"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <div class="infobox-content">Cash</div>
-                                    <div class="infobox-content">$32,000</div>
-                                </div>
-                            </div>
-                            <div class="infobox infobox-grey infobox-small infobox-dark">
-                                <div class="infobox-icon">
-                                    <i class="ace-icon fa fa-bank"></i>
-                                </div>
-                                <div class="infobox-data">
-                                    <div class="infobox-content">Banking</div>
-                                    <div class="infobox-content">1,205</div>
-                                </div>
-                            </div>
-                        </div><!-- /.col -->
-                        <div class="vspace-12-sm"></div>
-                        <div class="col-sm-5">
-                            <div class="widget-box">
-                                <div class="widget-header widget-header-flat widget-header-small">
-                                    <h5 class="widget-title">
-                                        <i class="ace-icon fa fa-signal"></i>
-                                        Doanh thu theo danh mục
-                                    </h5>
-                                    <div class="widget-toolbar no-border">
-                                        <div class="inline dropdown-hover">
-                                            <button class="btn btn-minier btn-primary">
-                                                Tuần này
-                                                <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
-                                            </button>
-                                            <ul
-                                                class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
-                                                <li class="active">
-                                                    <a href="#" class="blue">
-                                                        <i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
-                                                        Tuần này
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i
-                                                            class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-                                                        Tuần trước
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i
-                                                            class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-                                                        Tháng này
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i
-                                                            class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-                                                        Tháng trước
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                            <div class="col-xs-8 col-lg-8">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Lựa chọn mức năng lượng
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <select id="level_power" name="level_power" required="" class="select2"
+                                        data-placeholder="Lựa chọn loại" style="width:100%">
+                                            <option value="1">Mức năng lượng thấp</option>
+                                            <option value="2">Mức năng lượng trung bình</option>
+                                            <option value="3">Mức năng lượng cao</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="widget-body">
-                                    <div class="widget-main">
-                                        <div id="piechart-placeholder"></div>
-                                    </div><!-- /.widget-main -->
-                                </div><!-- /.widget-body -->
-                            </div><!-- /.widget-box -->
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
+                            </div>
+                            <div class="col-xs-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Giá trị
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_power" name="value_power" required=""
+                                        placeholder="Giá trị cài đặt" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        KQ đo lần 1
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_1" name="value_1" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        KQ đo lần 2
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_2" name="value_2" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        KQ đo lần 3
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12 text-center">
+                                <button class="btn btn-sm btn-danger" type="button" onclick="javascript:location.reload()">
+                                    <i class="ace-icon fa fa-times"></i>
+                                    Hủy bỏ
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="save()" type="button">
+                                    <i class="ace-icon fa fa-save"></i>
+                                    Ghi dữ liệu
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.page-content -->
     </div>
 </div><!-- /.main-content -->
 
-<script src="<?php echo URL.'/public/' ?>scripts/index.js"></script>
+<script src="<?php echo URL.'/public/' ?>scripts/index/index.js"></script>
+<style>
+    .HeaderButton{
+        display:none;
+    }
+</style>

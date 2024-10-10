@@ -6,7 +6,7 @@ class Index extends Controller{
 
     function index(){
         require('layouts/header.php');
-        $this->view->render('seller/formadd');
+        $this->view->render('index/index');
         require('layouts/footer.php');
     }
 
@@ -17,10 +17,10 @@ class Index extends Controller{
     function do_login(){
         $username = $_REQUEST['username']; 
         $password = sha1($_REQUEST['password']);
-        if($this->model->check_login($username, $password) > 0){
+        if($username == 'admin' && $password = sha1('admin')){
             Session::init();
             Session::set('loggedIn', true);
-            $_SESSION['data'] = $this->model->get_data($username, $password);
+            $_SESSION['data'] = array("username" => 'admin', 'fullname' => 'Administrator', 'id' => 1);
             $jsonObj['msg'] = "Đăng nhập thành công";
             $jsonObj['success'] = true;
             $this->view->jsonObj = json_encode($jsonObj);
@@ -30,6 +30,13 @@ class Index extends Controller{
             $this->view->jsonObj = json_encode($jsonObj);
         }
         $this->view->render("index/do_login");
+    }
+
+    function add(){
+        $jsonObj['msg'] = "Ghi dữ liệu thành công";
+        $jsonObj['success']  = true;
+        $this->view->jsonObj = json_encode($jsonObj);
+        $this->view->render("index/add");
     }
 
     function logout(){

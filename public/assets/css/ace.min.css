@@ -1146,7 +1146,8 @@ pre.prettyprint {
     -webkit-box-shadow: none;
     box-shadow: none;
     min-height: 45px;
-    background: #438EB9
+    background: #438EB9;
+    z-index: 1034;
 }
 
 .navbar .navbar-link, .navbar .navbar-text {
@@ -2568,7 +2569,7 @@ body.mob-safari .sidebar.sidebar-fixed {
 
     .sidebar.compact+.main-content {
         margin-left: 105px;
-        margin-bottom:50px;
+        margin-bottom: 50px;
     }
 }
 
@@ -2610,7 +2611,7 @@ body.mob-safari .sidebar.sidebar-fixed {
         top: -10px;
         bottom: auto;
         z-index: 1026;
-        width: 190px;
+        width: 220px;
         border: 1px solid;
         display: none !important;
         padding: 0 2px
@@ -6867,7 +6868,7 @@ button.btn:active {
 
 .badge, .label {
     font-weight: 400;
-    background-color: #ABBAC3;
+    /*background-color: #ABBAC3;*/
     text-shadow: none
 }
 
@@ -9196,7 +9197,7 @@ input.ace+.lbl.padding-0::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 30px;
+    height: 35px;
     background-color: #FFF;
     border: 1px solid #D5D5D5;
     cursor: pointer;
@@ -10493,7 +10494,8 @@ td .lbl:only-child, th .lbl:only-child {
     font-size: 14px;
     line-height: 38px;
     padding-left: 12px;
-    margin-bottom: 1px
+    margin-bottom: 1px;
+    text-align: center;
 }
 
 .table-header .close {
@@ -14538,7 +14540,7 @@ ul.attachment-list>li {
 }
 
 .timeline-style2 .timeline-label {
-    width: 75px;
+    width: 85px;
     margin-left: 0;
     margin-bottom: 10px;
     text-align: right;
@@ -15377,7 +15379,7 @@ div.dataTables_processing {
 }
 
 .select2-container .select2-selection--single {
-    height: 32px
+    height: 34px
 }
 
 .select2-container--default .select2-selection .select2-selection__choice__remove {
@@ -16165,9 +16167,9 @@ div.dataTables_processing {
     max-width: calc(100% - 20px)
 }
 
-.tree .tree-item:hover {
+/*.tree .tree-item:hover {
     background-color: rgba(98, 168, 209, .1)
-}
+}*/
 
 .tree .tree-item.tree-selected, .tree .tree-item.tree-selected:hover {
     background-color: rgba(98, 168, 209, .16)
@@ -20831,4 +20833,299 @@ input.typeahead.scrollable~.tt-menu {
     top: 0;
     /* The following line is responsible for all the magic */
     transform: translateX(min(var(--mouse-x), calc(100vw - 100%))) translateY(min(var(--mouse-y), calc(100vh - 100%)));
+}
+/*************************************************************/
+.table_modal {
+    font-family: "Roboto", Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table_modal td, .table_modal th {
+    border: 1px solid #ddd;
+    padding: 3px;
+}
+
+.table_modal tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table_modal th {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: left;
+    background-color: #307ECC;
+    color: white;
+}
+/***************************************************************************************************************/
+#list_file_result ul{
+    list-style: none;
+    margin-left:0px;
+}
+
+#list_file_result ul li{
+    float: left;
+    width: 100%;
+    border: 1px dashed #aaa;
+    margin-bottom:5px;
+    padding:3px;
+    border-radius: 4px;
+}
+
+#list_file_result ul li span:nth-child(1){
+    float:left;
+    width:90%;
+    overflow:hidden;
+}
+
+#list_file_result ul li span:nth-child(2){
+    float:left;
+    width:10%;
+    text-align: center;
+}
+
+#list_file_result ul li span:nth-child(2) a{
+    border: 3px solid #bbb;
+    border-radius: 50px;
+    background-color: #fff;
+    color:red;
+    padding:3px;
+}
+
+.file_attach_result{
+    float:left;
+    width:100%;
+}
+
+.file_attach_result a{
+    float:left;
+    width:60px;
+    margin-right:5px;
+    padding:3px;
+    border-bottom: 1px solid #ddd;
+}
+
+.file_attach_result a:hover{
+    text-decoration: none;
+}
+/************************************************************************************/
+.document_class{
+    float:left;
+    width:100%;
+    overflow:hidden;
+    padding:20px;
+}
+
+.document_class .top{
+    float:left;
+    width:100%;
+    margin-bottom:20px;
+}
+
+.document_class .top .top_left{
+    float:left;
+    width:40%;
+    text-align: center;
+}
+
+.document_class .top .top_left span{
+    float:left;
+    width:100%;
+    font-size:16px;
+    text-transform: uppercase;
+    font-weight:700;
+}
+
+.document_class .top .top_right{
+    float:left;
+    width:60%;
+    text-align: center;
+}
+
+.document_class .top .top_right span{
+    float:left;
+    width:100%;
+    font-size:16px;
+    font-weight:700;
+}
+
+.document_class .top .top_right span:nth-child(1){
+    text-transform: uppercase;
+}
+
+.middle{
+    float:left;
+    width: 100%;
+    overflow:hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.middle h3{
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom:0;
+}
+
+.middle span{
+    font-size:14px;
+    font-weight: 700;
+    font-style: italic;
+    float:left;
+    width:100%;
+}
+
+.document_class .content{
+    float:left;
+    width: 100%;
+    padding:0px 50px 20px 50px;
+}
+
+.document_class .content div{
+    float:left;
+    width:100%;
+    line-height: 2em;
+    font-size:14px;
+}
+
+.document_class .content .row_1{
+    float:left;
+    width:100%;
+}
+
+.document_class .content .row_1 span:nth-child(1){
+    float:left;
+    width:50%;
+}
+
+.document_class .content .row_1 span:nth-child(2){
+    float:left;
+    width:30%;
+}
+
+.document_class .content .row_1 span:nth-child(3){
+    float:left;
+    width:20%;
+}
+
+.document_class .content .row_2, .document_class .content .row_3,  .document_class .content .row_4{
+    float:left;
+    width:100%;
+}
+
+.document_class .bottom{
+    float:left;
+    width:100%;
+    padding: 0px 50px 0px 50px;
+}
+
+.document_class .bottom span:nth-child(1){
+    float:left;
+    width:50%;
+}
+
+.document_class .bottom span:nth-child(2){
+    float:left;
+    width:50%;
+    text-align: center;
+}
+
+.document_class .bottom span:nth-child(2) span{
+    float:left;
+    width:100%;
+}
+
+.document_class .bottom span:nth-child(2) span:nth-child(1){
+    font-weight: 700;
+    font-style: italic;
+}
+
+.document_class .bottom span:nth-child(2) span:nth-child(2){
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.document_class .bottom span:nth-child(2) span:nth-child(3){
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom:70px;
+}
+
+.document_class .bottom span:nth-child(2) span:nth-child(4){
+    font-weight: 700;
+}
+/**************************************************************************************/
+.week{
+    float: left;
+    width:100%;
+    overflow:hidden;
+}
+
+.week .top_content{
+    float:left;
+    width:100%;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+
+.week .top_content .left_content{
+    float:left;
+    width:25%;
+    text-align: center;
+}
+
+.week .top_content .left_content span{
+    float:left;
+    width:100%;
+    line-height: 1.5em;
+    font-size:15px;
+    text-transform: uppercase;
+}
+
+.week .top_content .left_content span:nth-child(2){
+    font-weight: 700;
+}
+
+.week .top_content .right_content{
+    float:left;
+    width:75%;
+    text-align: center;
+}
+
+.week .top_content .right_content span{
+    float:left;
+    width:100%;
+    line-height:1.5em;
+    font-weight: 700;
+    font-size:25px;
+    text-transform: uppercase;
+}
+
+.week .top_content .right_content span:nth-child(2){
+    font-size:15px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.week .content_week{
+    float:left;
+    width:100%;
+}
+
+#week_task{
+    border-collapse: collapse;
+    width:100%;
+}
+
+#week_task td, #week_task th{
+    border: 1px solid #ddd;
+    padding: 3px;
+}
+
+#week_task th{
+    padding-top:8px;
+    padding-bottom:8px;
+    text-align: center;
+    background-color: #438EB9;
+    color: white;
 }

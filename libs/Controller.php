@@ -31,24 +31,6 @@ class Controller {
             session_destroy();
             header ('Location: '.URL.'/index/login');
             exit;
-        }else{
-            if(isset($_REQUEST['url'])){
-                $url = $_REQUEST['url'];
-                $url = explode("/", $url);
-                if($this->_Info[0]['id'] != 1){ // nguoi dung dang nhap la admin thi khong chay
-                    if($url[0] != 'other'){ // neu duong dan thuoc cac duong dan tren thi khong chay
-                        if($this->_Data->check_role($this->_Info[0]['id'], $url[0]) == 0){
-                            // neu khong duoc phan quyen thi se bi logout
-                            session_start();
-                            session_destroy();
-                            header ('Location: '.URL.'/index/login');
-                            exit;
-                        }
-                    }
-                }
-            }else{
-                $url = "index";
-            }
         }
     }
 }

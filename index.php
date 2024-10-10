@@ -13,19 +13,6 @@ require 'libs/Session.php';
 require 'libs/config/paths.php';
 require 'libs/config/database.php';
 
-// Barcode
-require 'libs/vendor/autoload.php';
-
-/**
-* PHPExcel_IOFactory
-*/
-require_once 'libs/PHPExcel/PHPExcel/IOFactory.php';
-include ("libs/PHPExcel/PHPEXCHelper.php");
-/**
-* PHPExcel
-*/
-include 'libs/Excel.php';
-require_once 'libs/PHPExcel/PHPExcel.php';
 $app = new Bootstrap();
 
 ?>

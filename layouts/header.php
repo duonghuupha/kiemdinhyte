@@ -15,7 +15,7 @@ if(isset($_REQUEST['url'])){
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>IVYVET CENTER</title>
+		<title>VETABYTE SOFTWARE</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<link rel="stylesheet" href="<?php echo URL ?>/public/assets/css/roboto.css" />
@@ -31,7 +31,7 @@ if(isset($_REQUEST['url'])){
 		<link rel="stylesheet" href="<?php echo URL ?>/public/assets/css/ace.min.css"/>
 		<link rel="stylesheet" href="<?php echo URL ?>/public/assets/css/ace-skins.min.css" />
 		<link rel="stylesheet" href="<?php echo URL ?>/public/assets/css/ace-rtl.min.css" />
-		<link rel="shortcut icon" href="<?php echo URL ?>/public/assets/images/Logo.png" />
+		<link rel="shortcut icon" href="<?php echo URL ?>/public/assets/images/Logo.jpg" />
 		<script src="<?php echo URL ?>/public/assets/js/jquery-2.1.4.min.js"></script>
 		<script src="<?php echo URL ?>/public/assets/js/ace-extra.min.js"></script>
 		<script>

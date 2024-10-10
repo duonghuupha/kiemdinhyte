@@ -35,6 +35,41 @@ function save_reject(id_form, post_url, url_reject){
  * 
  * @param {*} id_form 
  * @param {*} post_url 
+ */
+function save_form_reset(id_form, post_url){
+    var xhr = new XMLHttpRequest();
+    var formData = new FormData($(id_form)[0]);
+    $('.overlay').show();
+    $.ajax({
+        url: post_url,  //server script to process data
+        type: 'POST',
+        xhr: function() {
+            return xhr;
+        },
+        data: formData,
+        success: function(data){
+            var result = JSON.parse(data);
+            if(result.success == true){
+                $('.overlay').hide();
+                show_message('success', result.msg);
+                $(id_form)[0].reset(); $('.select2').val(null).trigger('change.select2'); $('.file_attach').ace_file_input('reset_input');
+            }else{
+                $('.overlay').hide();
+                show_message('error', result.msg);
+                return false;
+            }
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+}
+
+
+/**
+ * 
+ * @param {*} id_form 
+ * @param {*} post_url 
  * @param {*} id_modal 
  * @param {*} id_content 
  * @param {*} url_refresh 
