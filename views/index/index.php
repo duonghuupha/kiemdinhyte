@@ -31,51 +31,81 @@
                             <div class="col-xs-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="form-field-username">
-                                        Lựa chọn loại kiểm định
+                                        Lựa chọn khách hàng
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
                                         <select id="loai_id" name="loai_id" required="" class="select2"
                                         data-placeholder="Lựa chọn loại" style="width:100%">
-                                            <option value="1">Kiểm định năng lượng phá rung tim</option>
-                                            <option value="2">Kiểm định thời gian phá rung tim đồng bộ</option>
-                                            <option value="3">Kiểm định thời gian phá rung tim liên tiếp</option>
+                                            <?php
+                                            for($i = 1; $i <= 20; $i++){
+                                                echo '<option value="'.$i.'">Khách hàng '.$i.'</option>';
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-8 col-lg-8">
+                            <div class="col-xs-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="form-field-username">
-                                        Lựa chọn mức năng lượng
+                                        Lựa chọn thiết bị
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
                                         <select id="level_power" name="level_power" required="" class="select2"
                                         data-placeholder="Lựa chọn loại" style="width:100%">
-                                            <option value="1">Mức năng lượng thấp</option>
-                                            <option value="2">Mức năng lượng trung bình</option>
-                                            <option value="3">Mức năng lượng cao</option>
+                                            <option value="1">Máy phá rung tim</option>
+                                            <option value="2">Máy thận nhân tạo</option>
+                                            <option value="3">Lồng ấp trẻ sơ sinh</option>
+                                            <option value="4">Máy thở</option>
+                                            <option value="5">Máy gây mê kèm thở</option>
+                                            <option value="6">Dao mổ điện cao tần</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-lg-4">
+                            <div class="col-xs-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="form-field-username">
-                                        Giá trị
+                                        Lựa chọn hồ sơ
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
-                                        <input type="text" id="value_power" name="value_power" required=""
-                                        placeholder="Giá trị cài đặt" style="width:100%" onkeypress="validate(event)"/>
+                                        <select id="level_power" name="level_power" required="" class="select2"
+                                        data-placeholder="Lựa chọn loại" style="width:100%">
+                                            <option value="1">Hồ sơ mới</option>
+                                            <option value="2">Hồ sơ 1</option>
+                                            <option value="3">Hồ sơ 2</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-lg-4">
+                            <div class="col-xs-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="form-field-username">
-                                        KQ đo lần 1
+                                        Lựa chọn loại thiết bị
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <select id="level_power" name="level_power" required="" class="select2"
+                                        data-placeholder="Lựa chọn loại" style="width:100%">
+                                            <?php
+                                            for($i = 1; $i <= 6; $i++){
+                                                echo '<option value="'.$i.'">Loại thiết bị '.$i.'</option>';
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <h3 class="header smaller lighter blue">
+                                    Kiểm tra chung (9)
+                                </h3>
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Sổ theo dõi
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
@@ -84,10 +114,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-lg-4">
+                            <div class="col-xs-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="form-field-username">
-                                        KQ đo lần 2
+                                        Kết quả kiểm định gần nhất
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
@@ -96,10 +126,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-lg-4">
+                            <div class="col-xs-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="form-field-username">
-                                        KQ đo lần 3
+                                        Tình trạng vệ sinh
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
@@ -108,6 +138,221 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Các bộ phận bên ngoài
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Các thiết bị kết nối bên ngoài
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Có hay không các hư hỏng vật lý khác
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Khả năng đáp ứng an toàn về cơ học
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Nối đất bảo vệ
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Pin/Acquy
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <h3 class="header smaller lighter blue">
+                                    Các tiêu chí an toàn (4)
+                                </h3>
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Dòng rò tần số thấp vỏ máy
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_1" name="value_1" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Dòng điện rò qua bộ phận ứng dụng (BF)
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Dòng điện rò qua bộ phận ứng dụng (CF)
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Kiểm tra báo động theo dõi
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_3" name="value_3" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-12">
+                                <h3 class="header smaller lighter blue">
+                                    Năng lượng (6)
+                                </h3>
+                            </div>
+                            <?php
+                            for($i = 1; $i <= 6; $i++){
+                            ?>
+                            <div class="col-xs-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Giá trị <?php echo $i; ?>
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_1" name="value_1" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                            <div class="col-xs-12 col-lg-12">
+                                <h3 class="header smaller lighter blue">
+                                    Thời gian (6)
+                                </h3>
+                            </div>
+                            <?php
+                            for($i =  1; $i <= 6; $i++){
+                            ?>
+                            <div class="col-xs-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Giá trị <?php echo $i; ?>
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_1" name="value_1" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                            <div class="col-xs-12 col-lg-12">
+                                <h3 class="header smaller lighter blue">
+                                    Thời gian nạp (2)
+                                </h3>
+                            </div>
+                            <?php
+                            for($i =  1; $i <= 2; $i++){
+                            ?>
+                            <div class="col-xs-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Giá trị <?php echo $i; ?>
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_1" name="value_1" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                            <div class="col-xs-12 col-lg-12">
+                                <h3 class="header smaller lighter blue">
+                                    Chức năng (13)
+                                </h3>
+                            </div>
+                            <?php
+                            for($i =  1; $i <= 13; $i++){
+                            ?>
+                            <div class="col-xs-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Giá trị <?php echo $i; ?>
+                                        <span style="color:red">(*)</span>
+                                    </label>
+                                    <div>
+                                        <input type="text" id="value_1" name="value_1" required=""
+                                        placeholder="Giá trị" style="width:100%" onkeypress="validate(event)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
                             <div class="col-xs-12 col-lg-12 text-center">
                                 <button class="btn btn-sm btn-danger" type="button" onclick="javascript:location.reload()">
                                     <i class="ace-icon fa fa-times"></i>
