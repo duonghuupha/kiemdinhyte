@@ -35,13 +35,8 @@
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
-                                        <select id="loai_id" name="loai_id" required="" class="select2"
-                                        data-placeholder="Lựa chọn loại" style="width:100%">
-                                            <?php
-                                            for($i = 1; $i <= 20; $i++){
-                                                echo '<option value="'.$i.'">Khách hàng '.$i.'</option>';
-                                            }
-                                            ?>
+                                        <select id="id_khach_hang" name="id_khach_hang" required="" class="select2"
+                                        data-placeholder="Lựa chọn loại" style="width:100%" onchange="set_thiet_bi(this.value)">
                                         </select>
                                     </div>
                                 </div>
@@ -53,14 +48,8 @@
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
-                                        <select id="level_power" name="level_power" required="" class="select2"
-                                        data-placeholder="Lựa chọn loại" style="width:100%" data-minimum-results-for-search="Infinity">
-                                            <option value="1">Máy phá rung tim</option>
-                                            <option value="2">Máy thận nhân tạo</option>
-                                            <option value="3">Lồng ấp trẻ sơ sinh</option>
-                                            <option value="4">Máy thở</option>
-                                            <option value="5">Máy gây mê kèm thở</option>
-                                            <option value="6">Dao mổ điện cao tần</option>
+                                        <select id="id_thiet_bi" name="id_thiet_bi" required="" class="select2" onchange="set_ho_so(this.value)"
+                                        data-placeholder="Lựa chọn thiết bị" style="width:100%" data-minimum-results-for-search="Infinity">
                                         </select>
                                     </div>
                                 </div>
@@ -72,16 +61,13 @@
                                         <span style="color:red">(*)</span>
                                     </label>
                                     <div>
-                                        <select id="level_power" name="level_power" required="" class="select2"
-                                        data-placeholder="Lựa chọn loại" style="width:100%" data-minimum-results-for-search="Infinity">
-                                            <option value="1">Hồ sơ mới</option>
-                                            <option value="2">Hồ sơ 1</option>
-                                            <option value="3">Hồ sơ 2</option>
+                                        <select id="id_ho_so" name="id_ho_so" required="" class="select2"
+                                        data-placeholder="Lựa chọn hồ sơ" style="width:100%" data-minimum-results-for-search="Infinity">
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-lg-12">
+                            <!--<div class="col-xs-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="form-field-username">
                                         Lựa chọn loại thiết bị
@@ -98,7 +84,7 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-xs-12 col-lg-12">
                                 <h3 class="header smaller lighter blue">
                                     Kiểm tra chung (9)

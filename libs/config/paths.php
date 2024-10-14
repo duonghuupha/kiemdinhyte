@@ -1,5 +1,5 @@
 <?php
-define('URL', 'http://'.$_SERVER['HTTP_HOST']);
+define('URL', 'https://'.$_SERVER['HTTP_HOST']);
 define('URL_OUT', 'http://longbiensearch:81');
 $dirtionary = realpath($_SERVER['DOCUMENT_ROOT']);
 define('DIR_UPLOAD', $dirtionary.'/public');

@@ -114,6 +114,7 @@ function combo_select_2(id, url_data, selected, title_selected){
             url: url_data,
             dataType: 'json',
             type: 'GET',
+            headers: {"token": localStorage.getItem('token')},
             data: function (params) {
                 var queryParameters = {
                     q: params.term
@@ -122,7 +123,7 @@ function combo_select_2(id, url_data, selected, title_selected){
             },
             processResults: function (data) {
                 return {
-                    results: $.map(data, function (item) {
+                    results: $.map(data.data, function (item) {
                         return {
                             text: item.title,
                             id: item.id,

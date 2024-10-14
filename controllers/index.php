@@ -23,6 +23,7 @@ class Index extends Controller{
             $_SESSION['data'] = array("username" => 'admin', 'fullname' => 'Administrator', 'id' => 1);
             $jsonObj['msg'] = "Đăng nhập thành công";
             $jsonObj['success'] = true;
+            $jsonObj['token'] = '8eed25bc56de47968bf4f19f3cd72e89';
             $this->view->jsonObj = json_encode($jsonObj);
         }else{
             $jsonObj['msg'] = "Thông tin đăng nhập không chính xác";
